@@ -4,5 +4,4 @@ The aim of this project is to develop simulation algorithms that can provide stu
 
 The platform utilizes tools such as the jsPlumb toolkit, HTML, CSS, and JavaScript integration to enable real-time circuit connections, validate user input, and display results in an observation table. The system also includes logic to generate and identify circuit element IDs, as well as a verification algorithm to ensure accurate circuit connections and measurements.
 
-Experiment link:
-https://tiwarianjani.github.io/Virtual-lab-development/
+Experiment link:[here](https://tiwarianjani.github.io/Virtual-lab-development/)
