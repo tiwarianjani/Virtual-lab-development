@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
+  <title>Owen's Bridge</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="jsplumb.min.js"></script>
+
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/MathJax.js?config=AM_CHTML"> </script>
+  <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!--  mragin :top,right,bottom,left 
+  display:flex; Using flex together with media queries to create a different layout for different screen sizes/devices: -->
+  <link rel="stylesheet" href="./style.css"/>
+
+</head>
+
+<body>
+  <div style="position: absolute;border: 2px solid black;top: -57px;left: -15px;
+">
+    <div class="container-fluid">
+      <div style="position:relative;    top: 66.8em;left:-1em;color:white;background-color: #cb3535;width: 101.6%;text-align: center;height: 33px;
+      padding: 5px;">
+        Copyright&copy;2023 | Lab developed by Virtual Labs, IIT Roorkee</div><br>
+      <div class="row">
+        <div class="col-md-2">
+          <h3 style="    position: absolute;
+          border: 2px solid black;
+          width: 323px;
+          text-align: center;background-color: #cb3535;color: white;border-radius: 6px;
+      ">Components</h3>
+          <div id="toolbox" class="justify-content-center" style="position: absolute;
+          top: 20px;
+          width: 323px;
+          height: 234px;
+      ">
+            <div class="control r"><img src="resistor.png" width="85px" height="50px"></div>
+            <div class="control v"><img src="voltage.png" width="85px" height="50px"></div>
+            <div class="control t"><img src="galv.png" width="85px" height="50px"></div>
+            <div class="control c"><img src="cap.png" width="85px" height="50px"></div>
+            <div class="control l"> <img src="ind.png" width="85px" height="50px"></div>
+            <h3 style="    position: absolute;
+            border: 2px solid black;
+            width: 323px;
+            text-align: center;background-color: #cb3535;color: white;border-radius: 6px;top: 245px;
+        ">Formulae</h3>
+            <div id="formulae" style="    position: absolute;
+        top: 288px;
+        padding: 10px;border: 2px solid black;height: 290%;    font-size: 21px; text-align: justify;">
+              <h5 style="color: #00741b"> If Bridge is Balanced:</h5>
+              There will be no potencial difference across the terminal of the sound-sensor. <br>
+              <p> Current through the sound-sensor: 0 </p>
+              <!-- <h5>Equivalent Impedence:</h5>
+              <p>`Z_1=R_1-frac(1)(jomegaC_1)`, `Z_2=-frac(1)(jomegaC_2)`</p>
+              
+              <p>`Z_3=R_3`, `Z_4=frac(R_4)(1+jomegaC_4R_4)`</p>
+              
+              <p>
+                ` Z_(1)Z_4=Z_2Z_3`
+              </p>
+              <p>Now we need to substitute the impedence value's of Schering bridge in the above equation</p>
+              <p>Then</p>
+              <p>`(R_1-frac(1)(jomegaC_1))(frac(R_4)(1+jomegaC_4R_4))`</p>
+              <p>=`(-frac(1)(jomegaC_2))R_3`</p>
+              <p>Now we need to equate the real and imaginary terms of the above equations</p>
+              <p>We get,</p> -->
+              <p> ` C_1=frac(C_2R_4)(R_3)`</p>
+              <p>
+                `R_1=frac(R_3C_4)(C_2)`
+              </p>
+
+
+              <h5 style="color: #00741b">If Bridge is Unbalanced:</h5>
+
+              <p>There will be some potencial difference across the terminal of the speaker.</p>
+              <p> Hence, some current will flow through the speaker and it's effect can be heared. </p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7" style="right: -76px;">
+          <h3 style="    position: absolute;
+        border: 2px solid black;
+        border-radius: 6px;
+        width: 96.4%;
+        text-align: center;right: 100px;background-color: #cb3535;color: white;
+    ">WorkSpace</h3>
+          <div id="diagram" style="    height: 960px; position: absolute;width: 96.4%;top: 20px;right: 100px;">
+            <button style="    position: absolute;
+          bottom: 14px;
+          right: 692px;
+          width: 120px;
+  " class="btn btn-danger">Check Circuit</button>
+            <button style="position: absolute;
+  bottom: 14px;
+  right: 553px;
+  width: 120px;
+  " class="btn btn-warning
+  " onclick="window.location.reload()">Reset</button>
+            <button style="    position: absolute;
+  bottom: 14px;
+  right: 414px;
+  width: 120px;
+  " class="btn btn-primary" onclick="window.print()">Print</button>
+            <p style="    position: absolute;
+           top: 8px; right: 9px;"><a href="javascript:void(0)"
+                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='none'"
+                class="btn btn-danger"><b>Instructions</b></a>
+          </div>
+
+        </div>
+
+        <div class="col-md-3" id="instruction">
+
+          <div id="inst" class="col-sm">
+            <!-- <p><a href="javascript:void(0)"
+              onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+              <b>Instructions</b></a> -->
+            </p>
+            <div id="light" class="white_content">
+             <div style="text-align: center;">
+              <h5>Owen's Bridge Experiment :<br></h5>
+              <img src="circuit.png" width="400px" height="320px">
+             </div>
+             <ul>&bull;Pick up resistances, capacitor, inductor, ac source and speaker from the toolbox.</ul>
+             <ul>&bull;Make connections as shown in the figure to form a Owen's bridge (red dot act as source and black dot act as destination).</ul>
+             <ul>&bull;After making the circuit click on check circuit button to check the connections.</ul>
+             <ul>&bull;Select value of capacitor and resistance R3.Now Enter value of source-voltage (in Volt), voltage-frequency(in Hz) and choose appropriate value of R2(in Ω) through slider and click on the submit button.</ul>
+             <ul>&bull;Repeat the experiment untill the bridge gets balanced.</ul><br>
+
+               <hr>
+              <a href="javascript:void(0)"
+                onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+                class="btn btn-outline-danger" style="    position: absolute;
+                top: 20px;
+                right: 20px;"><span style="padding-top: 6px;" class="material-symbols-outlined">
+                  close
+                </span></a>
+            </div>
+            <div id="fade" class="black_overlay"></div> 
+
+            <!-- <p><a href="javascript:void(0)"
+              onclick="document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">
+              <b>Observations</b></a> -->
+            </p>
+            <!-- <br> -->
+            <div id="light2" class="white_content" style=" overflow: scroll;"><b>Observation Table</b><br>
+              <!-- <table id="myTable">
+                <tr>
+                  <th>`R_1` in(&#8486)</th>
+                  <th>`C_1` in(&#956F)</th>
+                  <th>`R_3` in(&#8486)</th>
+                  <th>`C_4` in(&#956F) </th>
+                  <th>`R_4` in(&#8486)</th>
+                  <th>V<span>&#x2220</span><span>&#629</span></th> -->
+                  <!-- <th>`V` in(volt)</th>
+                  <th>`f_r` in(Hz)</th>
+                </tr> -->
+              <!-- </table>  -->
+              <a href="javascript:void(0)"
+                onclick="document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+            </div>
+            <div id="fade" class="black_overlay"></div>
+
+
+
+
+            <!-- <p><a href="javascript:void(0)"
+              onclick="document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block'">
+              <b>Formula</b></a> -->
+            </p>
+            <div id="light1" class="white_content">
+              <h4>Schering Bridge Experiment:</h4><br>
+
+
+
+
+              <div id="formula">
+
+                <h5> If Bridge is Balanced:</h5>
+              There will be no potencial difference across the terminal of the sound-sensor
+              <p> Current through the sound-sensor: 0 Amp</p>
+              <!-- <h5>Equivalent Impedence:</h5> -->
+              <p>`Z_1=R_1+jomegaL_1`</p>
+              <p>`Z_2=R_2+frac(1)(jomegaC_2)`</p>
+              <p>`Z_3=R_3`</p>
+              <p>`Z_4=frac(1)(jomegaC_4)`</p>
+              <p>
+                ` Z_(1)Z_4=Z_2Z_3`
+              </p>
+              <p>Now we need to substitute the impedence value's of Owen's bridge in the above equation</p>
+              <p>Then</p>
+              <p>`(R_1+jomegaL_1)(frac(1)(jomegaC_4))=(R_2+frac(1)(jomegaC_2))R_3`</p>
+              <p>Now we need to equate the real and imaginary terms of the above equations</p>
+              <p>We get,</p>
+              <p> ` L_1=R_2R_3C_4`</p>
+
+              <p>
+                `R_1=frac(R_3C_4)(C_2)`
+              </p>
+              <h5>If Bridge is Unbalanced:</h5>
+
+              <p>There will be some potencial difference across the terminal of the speaker.</p>
+              <p> Hence, some current will flow through the speaker and it's effect can be heared. </p>
+              </div>
+
+
+              <a href="javascript:void(0)"
+                onclick="document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+            </div>
+            <div id="fade" class="black_overlay"></div>
+            <div>
+            <h3 style="    position: relative;
+          border: 2px solid black;
+          width: 437px;
+          text-align: center;background-color: #cb3535;color: white;border-radius: 6px;right: 32px;
+      ">Calculations</h3>
+
+
+
+
+            <div id="mydiv" style="display:block;border: 2px solid black; padding: 20px;width: 90%;   position: absolute;
+top: 40px;right: 63px;">
+<div style="display:flex;">
+  <h5>Voltage across detector:&#160&#160</h5>
+<p id="digi" class="form-control" style="text-align:right;padding:5px 5px;font-size:1.5rem;width:150px;text-align:center;background-color:rgb(20, 2, 2) ; border:7px solid #7b7777;font-family:'Seven Segment'sans-serif;color:#cb3535;">--.--</p>
+
+</div>
+<div style="display:flex;">
+  <p>R<sub>1</sub>=1k&#8486 </p>
+  <p>, C<sub>4</sub>=1 &#956F</p>
+</div>
+              <form action="#" onsubmit="yourJsFunction();return false">
+                <label >Select R<sub>3</sub>:<br>
+                <select class="form form-control" id="r_3">
+
+                  <!-- <option>Select capacitence</option> -->
+                  <option value="100" class="form form-control"> 100&#8486 </option>
+                  <option value="200" class="form form-control"> 200&#8486 </option>
+                </select>
+</label>
+                <br>
+                <label >Select C<sub>2</sub>:<br></label>
+                <select class="form form-control" id="c_2">
+
+                  <!-- <option>Select capacitence</option> -->
+                  <!-- <option class="form form-control" value="0"> 0 &#956F </option> -->
+                  <option class="form form-control" value="0.0000001"> 0.1 &#956F</option>
+                  <option class="form form-control" value="0.0000002"> 0.2 &#956F</option>
+                  <!-- <option class="form form-control" value="0.00000001"> 0.01 &#956F</option> -->
+
+
+                </select>
+
+                <br>
+                
+                <label >Voltage(in Volt):</label>
+                <select class="form form-control"  id="data5">
+                  <option class="form form-control" value="10"> 10V</option>
+                  <option class="form form-control" value="15"> 15V</option>
+                </select>
+                <!-- <input class="form form-control" type="number" id="data5"><br> -->
+                <label ></label>Frequency(in Hz):</label>
+                <select class="form form-control"  id="data6">
+                  <option class="form form-control" value="50"> 50Hz</option>
+                </select>
+                <!-- <input class="form form-control" type="number" id="data6"><br> -->
+                <label>Input R<sub>2</sub>(in &#8486):</label>
+                <input class="inputRange form form-control" id="rangeInput" type="range" min="1" max="400"
+                   step="0.01"/>
+                <input class="form form-control" class="inputNumber" id="numberInput" type="number" min="1" max="400" placeholder="Enter between 1 to 400&#8486"
+                  step="0.01" /><br>
+                <input class="btn btn-success" id="btn1" style="width: 100%;" type="submit" disabled />
+
+              </form>
+<!--               
+              <button onClick="window.location.reload();">Reset</button>
+              <input type="button" value="Print Report" onClick="window.print()"> -->
+            </div>
+          </div>
+            <br>
+            <div>
+            <h3 style="    position: relative;
+          border: 2px solid black;
+          width: 458px;
+          text-align: center;background-color: #cb3535;color: white;border-radius: 6px;right: 40px;top: 590px;bottom: 0px;
+      ">Observation Table</h3>
+            <table id="myTable" style="    position: relative;
+                  top: 585px;
+            border: 2px solid black!important;
+            right: 39px;
+        width: 102%;
+            height: 50px;text-align: center;overflow: scroll;" class="">
+            <tr>
+              <th>`R_1` in(&#8486) </th>
+              <th>`L_1` in(mH)</th>
+              <th>`C_2` in(&#956F)</th>
+              <th>`R_2` in(&#8486) </th>
+              <!-- <th>Z4</th> -->
+              <!-- <th>V<span>&#x2220</span><span>&#629</span></th> -->
+              <th>`V` in(volt)</th>
+              <th>`f_r` in(Hz)</th>
+            </tr>
+            </table>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
